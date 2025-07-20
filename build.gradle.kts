@@ -5,7 +5,7 @@ plugins {
     val kotlinVersion = "1.9.25"
     val ktLintVersion = "10.3.0"
     val springBootVersion = "3.5.3"
-    val springDependencyManagementVersion = "1.1.4"
+    val springDependencyManagementVersion = "1.1.7"
 
     id("io.spring.dependency-management") version springDependencyManagementVersion
     id("org.flywaydb.flyway") version flywayVersion
