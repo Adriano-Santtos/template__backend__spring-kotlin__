@@ -27,7 +27,7 @@ repositories {
     mavenCentral()
 }
 
-val springDocOpenAPiVersion = "2.3.0"
+val springDocOpenAPiVersion = "2.8.9"
 val mockkVersion = "1.13.9"
 val kotlinLogging = "7.0.3"
 
