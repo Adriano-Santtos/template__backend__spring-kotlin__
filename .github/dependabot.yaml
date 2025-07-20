@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/" # The location of your build.gradle.kts or build.gradle files
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "maven"
+    directory: "/" # The location of your pom.xml file
+    schedule:
+      interval: "weekly"

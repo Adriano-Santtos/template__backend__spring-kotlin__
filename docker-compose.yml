@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    #    TODO: change container name
+    container_name: postgres
+    environment:
+      POSTGRES_DB: foo
+      POSTGRES_USER: local
+      POSTGRES_PASSWORD: local
+    ports:
+      - "5432:5432"
+    networks:
+      - foo_network
+
+
+  flyway:
+    image: flyway/flyway
+    command: [ "-url=jdbc:postgresql://postgres:5432/foo", "-user=local", "-password=local", "migrate" ]
+    volumes:
+      - ./flyway/sql:/flyway/sql
+    depends_on:
+      - postgres
+    networks:
+      - foo_network
+
+networks:
+  foo_network:
+    driver: bridge
