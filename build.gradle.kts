@@ -29,7 +29,7 @@ repositories {
 
 val springDocOpenAPiVersion = "2.8.9"
 val mockkVersion = "1.14.5"
-val kotlinLogging = "7.0.7"
+val kotlinLogging = "7.0.11"
 
 dependencies {
     // Spring Boot
